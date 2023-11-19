@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+	<link rel="stylesheet" href="styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="title">
+			Password Generator
+		</div>
+		<div class="main">
+			<div class="input-field">
+				<input type="text">
+				<button class="btn-copy">
+					<i class="material-symbols-rounded">content_copy</i>
+				</button>
+				<div id="complexity-indicator" class="complexity-weak"></div>
+			</div>
+			<div class="line"></div>
+			<div class="pass-length">
+				<span class="caption">Password Length:</span>
+				<span class="pass-length-number">10</span>
+				<input type="range" min="5" max="30" value="10" step="1" class="length-slider">
+			</div>
+			<div class="pass-settings">
+				<div class="option">
+					<input id='lowercase' name='lowercase' checked="true" type="checkbox">
+					<label for="lowercase">Lowercase (a-z)</label>
+				</div>
+				<div class="option">
+					<input id='uppercase' name='uppercase' type="checkbox">
+					<label for="uppercase">Uppercase (A-Z)</label>
+				</div>
+				<div class="option">
+					<input id='numbers' name="numbers" type="checkbox">
+					<label for="numbers">Numbers (0-9)</label>
+				</div>
+				<div class="option">
+					<input id='symbols' name='symbols' type="checkbox">
+					<label for="symbols">Symbols (!-$^+)</label>
+				</div>
+				<div class="option">
+					<input id='exclude-duplicate' name='exclude-duplicate' type="checkbox">
+					<label for="exclude-duplicate">Exclude Duplicate</label>
+				</div>
+				<div class="option">
+					<input id='spaces' name='include-spaces' type="checkbox">
+					<label for="include-spaces">Include Spaces</label>
+				</div>
+			</div>
+		</div>
+		<button class="generate">Generate</button>
+	</div>
+</body>
+<script src="script.js"></script>
+
+</html>
